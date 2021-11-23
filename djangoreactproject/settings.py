@@ -1,4 +1,6 @@
 from pathlib import Path
+import dj_database_url
+from decouple import config 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '61+08_jugosmq@dub=s_57y=xkysd$2mz+53)bne8c1*m)_$@#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -92,9 +94,6 @@ WSGI_APPLICATION = 'djangoreactproject.wsgi.application'
 #         'PORT': '5432'
 #     }
 # }
-
-import dj_database_url
-from decouple import config 
 
 DATABASES = {
     'default':dj_database_url.config(
